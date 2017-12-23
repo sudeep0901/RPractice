@@ -91,3 +91,82 @@ gsub(pattern="Ravan", replacement="Ram", x = "Ravan Ravan")
 strVect = strsplit("A dog ran fast", " ")
 strVect
 
+direction =c("Up", "Right", "Left", "Down", "Up")
+
+factorDir = factor(direction)
+factorDir
+
+  is.factor(factorDir)
+  
+  levels(x=factorDir)
+
+dow =c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday",
+       "Sunday")
+
+wDays = c("Tuesday", "Thursday","Monday")
+
+
+wdFact =factor(x=wDays, levels=dow, ordered = T)
+wdFact
+
+ 
+custData =data.frame(name=c("sudeep", "Renu","Manasvi"),
+                     age=c(33,34,08),
+                     stringsAsFactors = F)
+
+custData
+
+custData[1,1]
+custData[1,1:2]
+custData[1:3,2]
+
+custData[1:3,1]
+
+
+dim(custData)
+
+recordMark = data.frame(name="marl",age=33)
+recordMark
+#Adding Rows
+custData = rbind(custData, recordMark)
+custData
+debt = c(0,25.50,36,48.49)
+
+#Adding Column
+address = c("thane","Ratlam","Mumbai","Indore")
+address
+
+#Adding Column
+custData = cbind(custData,debt)
+custData
+
+
+custData = cbind(custData,address)
+custData
+
+
+owesMoneyh = custData[custData$debt > 0]
+owesMoneyh
+
+name = custData[custData$name %in% "Sudeep"]
+name
+
+#Looping
+num1 =1
+repeat{
+  
+  print(num1)
+  num1 = num1 + 1
+  if(num1 > 100) {
+    break
+  }
+  
+}
+
+num2 = 1
+while (num2 > 0)
+{
+  
+  num2 = num + 1;
+  
+}
